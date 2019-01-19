@@ -1,0 +1,20 @@
+#grad1 {
+  z-index: -1;
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+/*background-color: red; /* For browsers that do not support gradients */
+background-image: linear-gradient(to right, #31A8D6 , #FF9900); /* Standard syntax (must be last) */ 
+}
+h1{
+  color: black;
+}
+.dot {
+height: 25px;
+width: 25px;
+background-color: #bbb;
+border-radius: 50%;
+display:
+}
