@@ -6,17 +6,20 @@
   <title>Music Momentum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-  <script src="main.js"></script>
+  <!-- <script data-main="main.js" src="require.js"></script> -->
+  <script src="bundle.js"></script>
+  <!-- <script src="main.js"></script> -->
 </head>
-<body>
+<body onclick="drawCircle(event)">
   <h1>Music Momentum</h1>
-  <p>This linear gradient starts at the left. 
-    It starts blue, transitioning to orange.
-  </p>
   <div id="grad1" onclick=""></div>
   <p><strong>Start:</strong> Click anywhere horizontally to change the speed.</p>
-  <svg height="100" width="100">
-    <circle cx="50" cy="50" r="20" stroke="" stroke-width="3" fill="black" />
-  </svg>
+
+  
+
+  <canvas id="circlecanvas" width="500" height="500"></canvas> 
+ 
 </body>
+<!-- Browserify required due to Spotify API wrapper being in js instead of node.js -->
+
 </html>
