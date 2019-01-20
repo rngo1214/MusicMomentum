@@ -1,18 +1,65 @@
+title{
+  font-family: "Times New Roman";
+  color: black;
+}
 #grad1 {
-  z-index: -1;
-  position:fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  /*background-color: red; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, #31A8D6 , #FF9900); /* Standard syntax (must be last) */ 
+z-index: -1;
+position:fixed;
+top: 0;
+left: 0;
+height: 100vh;
+width: 100vw;
+/*background-color: red; /* For browsers that do not support gradients */
+background-image: linear-gradient(to right, #31A8D6 , #FF9900); /* Standard syntax (must be last) */ 
 }
 #circlecanvas{
-  position: absolute;
-  top: 0;
-  left: 0;
+position: absolute;
+top: 0;
+left: 0;
 }
 h1{
-  color: black;
+color: black;
+}
+#song{
+  color: #F0F0F0;
+  padding-left: 110px;
+  margin: 5px;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+#artist{
+  color: #B3B3B3;
+  padding-left: 110px;
+  margin: 5px;
+      font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+#album_placeholder{
+  width:90px;
+height: 90px;
+position: fixed;
+bottom: 0px;
+left: 0px;
+}
+#logo{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width:60px;
+  height:60px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+.flex-container{
+width: 100%;
+height: 90px;
+position: fixed;
+bottom: 0px;
+left: 0px;
+display: flex;
+flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }

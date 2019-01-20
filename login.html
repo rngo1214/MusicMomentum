@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Music Momentum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+  <!-- Browserify required due to Spotify API wrapper being in js instead of node.js -->
+  
+</head>
+<body onclick="drawCircle(event)">
+  <h1>Music Momentum</h1>
+  <div id="grad1" onclick=""></div>
+  <p><strong>Start:</strong> Click anywhere horizontally to change the speed.</p>
+  
+  <div class="flex-container" style="background-color: #282828">
+    <div class="scroll" id="song">
+        Song Title
+      </div>
+    <div class="scroll" id="artist">
+        Artist
+      </div>
+  </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" id="logo">
+    <img id="album_placeholder" src="">
+
+
+  <canvas id="circlecanvas" width="500" height="500"></canvas> 
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script src="bundle.js"></script>
+  <script>
+    window.onSpotifyWebPlaybackSDKReady = () => {
+      
+    }
+    
+  </script>
+  
+</body>
+
+</html>

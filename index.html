@@ -1,25 +1,170 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Music Momentum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-  <!-- <script data-main="main.js" src="require.js"></script> -->
-  <script src="bundle.js"></script>
-  <!-- <script src="main.js"></script> -->
+  <title>Music Momentum Login</title>
+  <style>
+    #start_button {
+      background-color: #2fd566;
+      margin: 42.77%;
+      width: 15%;
+      padding: 13px;
+      border-radius: 30px;
+      font-family: Arial;
+      color: white;
+      margin-top: 3%;
+      display: grid;
+    }
+    #txt {
+      text-align: center;
+      font-size: 18px;
+      font-family: Arial;
+      margin-top: 5%;
+    }
+    .grid-container {
+      margin-left: 20%;
+      margin-right: 15%;
+      margin-top: 2%;
+      display: inline-grid;
+      justify-content: space-between;
+      align-items: stretch;
+      grid-gap: 50px 100px;
+    }
+    /* Customize the label (the container) */
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: Arial;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    /* Hide the browser's default checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+    }
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: #2196f3;
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    .item1 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  </style>
 </head>
-<body onclick="drawCircle(event)">
-  <h1>Music Momentum</h1>
-  <div id="grad1" onclick=""></div>
-  <p><strong>Start:</strong> Click anywhere horizontally to change the speed.</p>
-
-  
-
-  <canvas id="circlecanvas" width="500" height="500"></canvas> 
- 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<body>
+  <div class="grid-container" id="grid">
+    <div class="item1"></div>
+    <label class="container">Pop <input type="checkbox" id="checkPop" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Rock <input type="checkbox" id="checkRock" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Hip-Hop <input type="checkbox" id="checkHip" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Blues <input type="checkbox" id="checkBlues" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Jazz <input type="checkbox" id="checkJazz" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Country <input type="checkbox" id="checkCountry" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Classical <input type="checkbox" id="checkClassical" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Electronic <input type="checkbox" id="checkElectronic" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Alt-Rock <input type="checkbox" id="checkAlt" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Heavy-Metal <input type="checkbox" id="checkHeavy" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Dance <input type="checkbox" id="checkDance" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Reggae <input type="checkbox" id="checkReggae" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Punk-Rock <input type="checkbox" id="checkPunk" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Disco <input type="checkbox" id="checkDisco" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Gospel <input type="checkbox" id="checkGospel" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Techno <input type="checkbox" id="checkTechno" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Hard-Rock <input type="checkbox" id="checkHard" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Indie <input type="checkbox" id="checkIndie" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Dubstep <input type="checkbox" id="checkDubstep" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Chill <input type="checkbox" id="checkChill" />
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  <p id="txt">Choose at most 5</p>
+  <div class="w3-button" id="start_button">
+    Get Started
+  </div>
+  <script src="app.js"></script>
 </body>
-<!-- Browserify required due to Spotify API wrapper being in js instead of node.js -->
-
 </html>
